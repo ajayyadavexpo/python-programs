@@ -1,0 +1,7 @@
+element = driver.find_element_by_id("email")
+
+element.send_keys(user_name) // user_name = "ajayyadav" input in the field
+
+element.send_keys(Keys.RETURN)
+
+submit.click()
