@@ -14,15 +14,3 @@ data = [['E001', 'M', 34, 123, 'Normal', 350],
         ['E010', 'M', 36, 133, 'Underweight', 40] ] 
   
 df = pd.DataFrame(data, columns = ['EMPID', 'Gender','Age', 'Sales','BMI', 'Income'] ) 
-
-# all 3 age, income, sales 
-df.plot.bar() 
-  
-# plot between 2 attributes 
-plt.bar(df['Age'], df['Sales']) 
-plt.xlabel("Age") 
-plt.ylabel("Sales") 
-plt.show()
-
-# create histogram for numeric data 
-# df.hist() 
