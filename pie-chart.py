@@ -1,6 +1,5 @@
 import pandas as pd 
 import matplotlib.pyplot as plt 
-  
 
 data = [['E001', 'M', 34, 123, 'Normal', 350], 
         ['E002', 'F', 40, 114, 'Overweight', 450], 
@@ -14,3 +13,14 @@ data = [['E001', 'M', 34, 123, 'Normal', 350],
         ['E010', 'M', 36, 133, 'Underweight', 40] ] 
   
 df = pd.DataFrame(data, columns = ['EMPID', 'Gender','Age', 'Sales','BMI', 'Income'] ) 
+
+label = {"A", "B", "C", "D", "E", "F","G", "H", "I", "J"}
+
+plt.pie(df['Age'], labels = label ,autopct ='% 1.1f %%', shadow = True) 
+plt.show() 
+  
+plt.pie(df['Income'], labels = label,autopct ='% 1.1f %%', shadow = True) 
+plt.show() 
+  
+plt.pie(df['Sales'], labels = label,autopct ='% 1.1f %%', shadow = True) 
+plt.show() 
