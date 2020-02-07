@@ -5,7 +5,7 @@ myconn = mysql.connector.connect(host="localhost",user="root",passwd="",database
 cur = myconn.cursor()
 
 try:
-	cur.execute("select name,id,salary from employee where name like 'j%'")
+	cur.execute("select name,id,salary from employee order by name desc")
 
 	result = cur.fetchall()
 	print("Name id Salary")
