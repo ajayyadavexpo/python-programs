@@ -8,10 +8,14 @@ cur = myconn.cursor()
   
 try:  
     #joining the two tables on departments_id  
-    cur.execute("select Employee.id, Employee.name, Employee.salary, Departments.Dept_id, Departments.Dept_Name from Departments join Employee on Departments.Dept_id = Employee.Dept_id")  
+    result = cur.execute("select Employee.id, Employee.name, Employee.salary, Departments.Dept_id, Departments.Dept_Name from Departments right join Employee on Departments.Dept_id = Employee.Dept_id")  
+      
     print("ID    Name    Salary    Dept_Id    Dept_Name")  
+      
     for row in cur:  
-        print("%d    %s    %d    %d    %s"%(row[0], row[1],row[2],row[3],row[4]))  
+        print(row[0],"    ", row[1],"    ",row[2],"    ",row[3],"    ",row[4])  
+      
+      
           
 except:  
     myconn.rollback()  
