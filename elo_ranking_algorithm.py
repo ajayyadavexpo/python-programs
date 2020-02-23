@@ -75,3 +75,4 @@ Rb = 1000
 K = 30
 d = 1
 EloRating(Ra, Rb, K, d) 
+
